@@ -1,0 +1,15 @@
+h2{
+    color: blue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+button{
+    color: crimson;
+    border-radius: 20px;
+    background-color: yellow;
+}
+
+#p1{
+    color: hotpink;
+    font-size: 30px;
+}
