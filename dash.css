@@ -1,0 +1,27 @@
+
+.header{
+    width: 100%;
+    height: 100px;
+    background: slategrey;
+}
+.content-left{
+    width: 20%;
+    height: 400px;
+    float: left;
+    background: rgb(45, 49, 53);
+}
+.content .content-right{
+    width:80%;
+    float: left;
+    height: 400px;
+    background: grey;
+}
+
+.content{
+    height: 400px;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    background: skyblue;
+}
