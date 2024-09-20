@@ -13,3 +13,20 @@ button{
     color: hotpink;
     font-size: 30px;
 }
+
+div{
+    height: 200px;
+    width: 300px;
+    background: gold;
+    border-radius: 25px;
+    border: 2px solid;
+    border-color: brown;
+    margin-left: 250px;   /* This is used to align the div from the previous element*/
+
+    padding-left: 150px; /*This is used to  align content inside the div*/
+
+}
+.pwhite{
+    color: aqua;
+
+}
