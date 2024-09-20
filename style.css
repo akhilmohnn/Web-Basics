@@ -21,12 +21,25 @@ div{
     border-radius: 25px;
     border: 2px solid;
     border-color: brown;
-    margin-left: 250px;   /* This is used to align the div from the previous element*/
+    /*margin-left: 250px;   This is used to align the div from the previous element*/
 
-    padding-left: 150px; /*This is used to  align content inside the div*/
+    /*padding-left: 150px; This is used to  align content inside the div*/
 
 }
 .pwhite{
     color: aqua;
 
+}
+
+.box{
+    margin-left: 100px;
+    padding-left: 50px;
+}
+
+.inner-div{
+
+    margin: 10px;
+    background: lightseagreen;
+    width: 200px;
+    height: 100px;
 }
