@@ -18,6 +18,14 @@
             $("#btn").click(function(){
                 alert("Button Clicked")
             })
+
+            $("#btn").mouseenter(function(){
+                $(this).css({"background":"red"});
+            })
+
+            $("#btn").mouseleave(function(){
+                $(this).css({"background":"white"});
+            })
         })
     </script>
 
