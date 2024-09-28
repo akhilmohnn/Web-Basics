@@ -14,6 +14,9 @@
         <div id="box">
 
         </div>
+        <input type="text" name="" id="inp">
+        <label style="display: none;" id="error" >Enter minimum 4 characters</label>
+        <input type="text" id="">
 
 
 </center>
@@ -33,6 +36,17 @@
 
             $("#btn").mouseleave(function(){
                 $(this).css({"background":"white"});
+            })
+
+            $("#inp").blur(function(){
+                var text=$(this).val()
+                if(text.length<4){
+                    //alert("Enter min 4 character")
+                    $("#error").show();
+                }
+                else{
+                    $("#error").hide();
+                }
             })
         })
     </script>
