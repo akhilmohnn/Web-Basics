@@ -3,7 +3,8 @@ $(document).ready(function(){
         rules:{
             name:{
                 required:true,
-                minlength:4
+                minlength:4,
+                maxlength:6
             },
             email:{
                 required:true,
@@ -14,8 +15,26 @@ $(document).ready(function(){
                 minlength:10,
                 digits:true
             },
-            
+            password:{
+                required:true,
+                minlength:8,
+                maxlength:12
+                
+            },
+            confirmpassword:{
+                minlength:8,
+                maxlength:12
+            },
+            gender:{
+                required:true
+            }
 
+
+        },
+        messages:{
+            name:{
+                required:"Enter the name    "
+            }
         }
     })
     
