@@ -42,7 +42,7 @@
                 var text=$(this).val()
                 if(text.length<4){
                     //alert("Enter min 4 character")
-                    $("#error").show();
+                    $("#error").css({"color":"red"}).show();
                 }
                 else{
                     $("#error").hide();
