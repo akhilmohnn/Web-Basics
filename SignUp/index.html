@@ -23,6 +23,17 @@
                 <input type="tel" id="contact" name="contact" >
             </div>
             <div class="input-group">
+                <label for="gender">Gender</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="input-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" >
             </div>
@@ -94,6 +105,16 @@
         .input-group input:focus {
             border-color: #007bff;
             outline: none;
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 10px; /* Adds spacing between the options */
+            align-items: center;
+        }
+
+        .gender-options input[type="radio"] {
+            margin-right: 5px;
         }
 
         button {
