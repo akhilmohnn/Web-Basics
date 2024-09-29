@@ -18,7 +18,8 @@ $(document).ready(function(){
             password:{
                 required:true,
                 minlength:8,
-                maxlength:12
+                maxlength:12,
+                
                 
             },
             confirmpassword:{
@@ -33,7 +34,7 @@ $(document).ready(function(){
         },
         messages:{
             name:{
-                required:"Enter the name    "
+                required:"Enter the name"
             }
         }
     })
