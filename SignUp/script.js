@@ -35,7 +35,11 @@ $(document).ready(function(){
         messages:{
             name:{
                 required:"Enter the name"
+            },
+            contact:{
+                required:"Enter contact"
             }
+
         }
     })
     
