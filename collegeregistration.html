@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Student Registration</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            padding: 20px;
+            background-color: white;
+            width: 300px;
+            margin: auto;
+            border-radius: 5px;
+        }
+        h2 {
+            color: darkblue;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            width: 100%;
+            margin: 8px 0;
+            padding: 5px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 16px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form>
+            <h2 id="registration">MCA REGISTRATION</h2>
+            <label for="fname">First name:</label>
+            <input type="text" name="fname" size="25" placeholder="Enter first name" required><br><br>
+
+            <label for="sname">Second name:</label>
+            <input type="text" name="sname" size="25" placeholder="Enter second name"><br><br>
+
+            <label for="contact">Contact no:</label>
+            <input type="text" name="contact" size="25" placeholder="Enter contact no."><br><br>
+
+            <label for="gender">Select gender</label><br>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female<br><br>
+
+            <h4>Subjects studied in plus two</h4>
+            <select name="dropdown">
+                <option value="science">Science</option>
+                <option value="Computer">Computer</option>
+                <option value="commerce">Commerce</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <input type="submit" name="submit" value="Submit"/>
+            <input type="reset" name="reset" value="Reset"/>
+        </form>
+    </center>
+</body>
+</html>
