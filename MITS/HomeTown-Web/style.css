@@ -14,3 +14,28 @@ body{
 .townhead h1:hover{
     color: rgb(209, 43, 34);
 }
+
+.map {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.map h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.map-container {
+    width: 80%;  /* Set map container width */
+    height: 450px; /* Set height of the container */
+    margin: 0 auto;
+    border: 2px solid #ddd; /* Optional border */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensures iframe fits inside */
+}
+
+.map-container iframe {
+    width: 100%; /* Makes iframe full width of container */
+    height: 100%; /* Makes iframe full height of container */
+    border: none; /* Removes the iframe's border */
+}
