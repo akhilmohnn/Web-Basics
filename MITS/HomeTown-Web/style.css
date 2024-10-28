@@ -17,7 +17,7 @@ body{
 
 .map {
     text-align: center;
-    margin: 400px auto 0px;
+    margin: 0 auto ;
 }
 
 .map h3 {
@@ -38,4 +38,25 @@ body{
     width: 100%; /* Makes iframe full width of container */
     height: 100%; /* Makes iframe full height of container */
     border: none; /* Removes the iframe's border */
+}
+
+
+.attractions {
+    text-align: center; /* Center the heading */
+}
+
+.image {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if there's not enough space */
+}
+
+.attraction-item {
+    margin: 10px; /* Add space between items */
+    text-align: center; /* Center captions under images */
+}
+
+.attraction-item img {
+    max-width: 100%; /* Make sure images are responsive */
+    height: auto; /* Maintain aspect ratio */
 }
