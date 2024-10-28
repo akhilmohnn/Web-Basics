@@ -60,4 +60,12 @@ body{
 .attraction-item img {
     max-width: 100%; /* Make sure images are responsive */
     height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+
+}
+
+
+
+.attraction-item img:hover {
+    transform: scale(1.1); /* Scale image to 110% on hover */
 }
