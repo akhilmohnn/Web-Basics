@@ -1,0 +1,46 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* Main title */
+h1 {
+    margin: 20px;
+}
+
+/* Section for each positioning method */
+.positioning-container {
+    margin: 20px 0;
+}
+
+/* Container for relative positioning */
+.relative-box-container {
+    position: relative; /* Reference for absolutely positioned elements */
+    width: 300px; /* Fixed width for simplicity */
+    height: 150px; /* Fixed height for consistency */
+    margin: 0 auto; /* Center the container */
+    background-color: #e3f2fd; /* Light background for visibility */
+}
+
+/* Individual boxes with relative positioning */
+.relative-box {
+    position: relative; /* Positioned relative to its original place */
+    background-color: #ff8a65; /* Simple background color */
+    color: white; /* White text for contrast */
+    width: 80px;
+    height: 50px;
+    margin: 10px;
+    display: inline-flex; /* Align text center */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+/* Hover effect for relative boxes */
+.relative-box:hover {
+    transform: scale(1.1); /* Scale up the box slightly on hover */
+}
+
+
