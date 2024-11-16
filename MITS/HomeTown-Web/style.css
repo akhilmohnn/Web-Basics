@@ -1,71 +1,125 @@
-body{
-    background-color: #eaf2f8;
+body {
+    background: url('/iri.jpeg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
 }
 
-
-.townhead{
-    background-color: #d4e6f1 ;
+.townhead {
+    background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100px;
     border-radius: 25px;
     text-align: center;
     justify-content: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.townhead h1:hover{
-    color: rgb(209, 43, 34);
+.townhead h1 {
+    font-size: 2.5em;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.townhead h1:hover {
+    color: #d12b22;
+}
+
+.townhead p {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+.townhead a {
+    color: #0099cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.townhead a:hover {
+    text-decoration: underline;
+}
+
+.attractions {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.attractions h3 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.attraction-item {
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.attraction-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.attraction-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.attraction-item:hover {
+    transform: translateY(-5px);
 }
 
 .map {
     text-align: center;
-    margin: 0 auto ;
+    margin-top: 40px;
 }
 
 .map h3 {
-    font-size: 1.5em;
-    color: #333;
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .map-container {
-    width: 80%;  /* Set map container width */
-    height: 450px; /* Set height of the container */
+    width: 80%;
+    height: 450px;
     margin: 0 auto;
-    border: 2px solid #ddd; /* Optional border */
-    border-radius: 15px; /* Rounded corners */
-    overflow: hidden; /* Ensures iframe fits inside */
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .map-container iframe {
-    width: 100%; /* Makes iframe full width of container */
-    height: 100%; /* Makes iframe full height of container */
-    border: none; /* Removes the iframe's border */
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
-
-.attractions {
-    text-align: center; /* Center the heading */
-}
-
-.image {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if there's not enough space */
-}
-
-.attraction-item {
-    margin: 10px; /* Add space between items */
-    text-align: center; /* Center captions under images */
-}
-
-.attraction-item img {
-    max-width: 100%; /* Make sure images are responsive */
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s ease; /* Smooth transition effect */
-
-}
-
-
-
-.attraction-item img:hover {
-    transform: scale(1.1); /* Scale image to 110% on hover */
+/* New Section for Additional Boxes */
+.extra-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 30px;
+    padding: 20px 0;
 }
