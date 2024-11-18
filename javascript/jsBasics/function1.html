@@ -1,0 +1,24 @@
+<html>
+<body>
+<h2>using typeof inside function:</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+
+myFunction();
+function myFunction(){
+
+let carName="Toyota";
+
+document.getElementById('demo1').innerHTML= typeof carName + " ";
+
+}
+
+
+document.getElementById('demo2').innerHTML= typeof carName + " " //carName declared inside function,so not gets 
+
+
+</script>
+</body>
+</html>
