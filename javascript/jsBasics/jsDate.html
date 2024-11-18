@@ -6,11 +6,17 @@
 <body>
 
 
-<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
 <script>
 
 var d= new Date();
-document.getElementById("demo").innerHTML=d;
+document.getElementById("demo1").innerHTML=d;
+
+const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const date= new Date("2024-11-18");
+let day=days[d.getDay()];
+document.getElementById("demo2").innerHTML=day;
 
 </script>
 
