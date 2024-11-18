@@ -8,6 +8,7 @@
 
 <p id="demo1"></p>
 <p id="demo2"></p>
+<p id="demo3"></p>
 <script>
 
 var d= new Date();
@@ -17,6 +18,11 @@ const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturda
 const date= new Date("2024-11-18");
 let day=days[d.getDay()];
 document.getElementById("demo2").innerHTML=day;
+
+
+const d2=new Date();
+d2.setFullYear(2020);
+document.getElementById("demo3").innerHTML=d2;
 
 </script>
 
