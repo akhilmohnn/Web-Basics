@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./Spiderman.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #F8F9FA; /* White */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #4682B4; 
+    border-radius: 10px;
+    background-color: #708090; 
+    width: 320px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #FF4500; 
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #F8F9FA; 
+}
+
+input {
+    padding: 5px;
+    border: 1px solid #4682B4; 
+    border-radius: 5px;
+    width: 80px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #F8F9FA; 
+    color: #2B2D42; 
+}
+
+button {
+    background-color: #FF4500; 
+    color: #F8F9FA; 
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #D90429; 
+}
+
+#monthYear {
+    margin: 20px 0 10px;
+    color: #00CED1; 
+    font-size: 1.2em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #4682B4; 
+    padding: 5px;
+    text-align: center;
+    color: #F8F9FA; 
+}
+
+th {
+    background-color: #4682B4;
+}
+
+td {
+    background-color: #2B2D42; 
+}
+
+.empty {
+    background-color: #708090; 
+}

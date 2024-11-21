@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript String and Math Basics</title>
+</head>
+<body>
+    <h1>Predefined Functions in JavaScript</h1>
+
+    <h2>Math Object</h2>
+    <p id="math1"></p>
+    <p id="math2"></p>
+    <p id="math3"></p>
+    <p id="math4"></p>
+    <p id="math5"></p>
+    <p id="math6"></p>
+
+    <h2>String Object</h2>
+    <p id="string1"></p>
+    <p id="string2"></p>
+    <p id="string3"></p>
+    <p id="string4"></p>
+    <p id="string5"></p>
+    <p id="string6"></p>
+
+    <script>
+        document.getElementById("math1").innerHTML = "Math.round(4.6): " + Math.round(4.6);
+        document.getElementById("math2").innerHTML = "Math.sign(-3): " + Math.sign(-3);
+        document.getElementById("math3").innerHTML = "Math.pow(3, 4): " + Math.pow(3, 4);
+        document.getElementById("math4").innerHTML = "Math.abs(-10): " + Math.abs(-10);
+        document.getElementById("math5").innerHTML = "Math.min(-3, 0, 5, 7): " + Math.min(-3, 0, 5, 7);
+        document.getElementById("math6").innerHTML = "Math.random(): " + Math.random();
+
+        const sampleString = "Hello JavaScript!";
+        document.getElementById("string1").innerHTML = "String.length: " + sampleString.length;
+        document.getElementById("string2").innerHTML = "String.toUpperCase(): " + sampleString.toUpperCase();
+        document.getElementById("string3").innerHTML = "String.toLowerCase(): " + sampleString.toLowerCase();
+        document.getElementById("string4").innerHTML = "String.indexOf('Java'): " + sampleString.indexOf("Java");
+        document.getElementById("string5").innerHTML = "String.slice(6, 16): " + sampleString.slice(6, 16);
+        document.getElementById("string6").innerHTML = "String.replace('JavaScript', 'World'): " + sampleString.replace("JavaScript", "World");
+    </script>
+</body>
+</html>
