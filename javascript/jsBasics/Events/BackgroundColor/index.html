@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            background-color: black;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #FF6347; /* Tomato color */
+            width: 150px;
+            height: 50px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            margin-top: 200px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #FF4500; /* OrangeRed color */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">Random Background Colors</h1>
+    <button id="myButton">Click Here</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('myButton');
+            button.addEventListener('click', () => { 
+                const randomColor = `#${Math.floor(Math.random() * 128 + 127).toString(16)}${Math.floor(Math.random() * 128 + 127).toString(16)}${Math.floor(Math.random() * 128 + 127).toString(16)}`; 
+                document.body.style.backgroundColor = randomColor;
+            });
+        });
+    </script>
+</body>
+</html>
