@@ -2,13 +2,59 @@
 <head>
     <title>Student Registration</title>
     <style>
-        
+        body {
+            background-color: rgb(42, 41, 41);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
         form {
             padding: 20px;
-            background-color: #E7494A;
+            background-color: white; /* White background for the form */
             width: 300px;
             margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(45, 45, 45, 0.2), 0 6px 20px rgba(49, 49, 49, 0.19);
+            text-align: left;
+        }
+        form h2 {
+            text-align: center;
+            color: rgb(202, 11, 11); /* Adding a vibrant red color for the title */
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            color: black;
+        }
+        form input[type="text"],
+        form select {
+            width: calc(100% - 10px);
+            padding: 5px;
+            margin-bottom: 15px;
             border-radius: 5px;
+            border: none;
+            box-shadow: 0 2px 4px rgba(45, 45, 45, 0.2);
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        form h4 {
+            margin: 15px 0 5px;
+            color: black;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #0a6f0c; /* Green for submit */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="reset"] {
+            background-color: #c91a1a; /* Red for reset */
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #1a1ac9; /* Blue for hover */
         }
     </style>
 </head>
@@ -17,13 +63,13 @@
         <form>
             <h2 id="registration">MCA REGISTRATION</h2>
             <label for="fname">First name:</label>
-            <input type="text" name="fname" size="25" placeholder="Enter first name" required><br><br>
+            <input type="text" name="fname" size="25" placeholder="Enter first name" required>
 
             <label for="sname">Second name:</label>
-            <input type="text" name="sname" size="25" placeholder="Enter second name"><br><br>
+            <input type="text" name="sname" size="25" placeholder="Enter second name">
 
             <label for="contact">Contact no:</label>
-            <input type="text" name="contact" size="25" placeholder="Enter contact no."><br><br>
+            <input type="text" name="contact" size="25" placeholder="Enter contact no.">
 
             <label for="gender">Select gender</label><br>
             <input type="radio" name="gender" value="male"> Male
@@ -37,8 +83,10 @@
                 <option value="other">Other</option>
             </select><br><br>
 
-            <input type="submit" name="submit" value="Submit"/>
-            <input type="reset" name="reset" value="Reset"/>
+            <center>
+                <input type="submit" name="submit" value="Submit"/>
+                <input type="reset" name="reset" value="Reset"/>
+            </center>
         </form>
     </center>
 </body>

@@ -5,103 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCA Student Registration</title>
     <style>
-        html{
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        html {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-         div.container {
-            padding: 10px 20px;
+        body {
+            background-color: rgb(42, 41, 41);
+            margin: 0;
+            padding: 0;
+        }
+        div.container {
+            padding: 20px;
             width: 70%;
             background-color: white;
-            box-shadow: 0 4px 8px 0 rgba(45, 45, 45, 0.2), 0 6px 20px 0 rgba(49, 49, 49, 0.19);
-            margin: 0 auto 25px auto;
+            box-shadow: 0 4px 8px rgba(45, 45, 45, 0.2), 0 6px 20px rgba(49, 49, 49, 0.19);
+            margin: 20px auto;
+            box-sizing: border-box; /* Include padding and borders in element's width and height */
         }
-        textarea{
-            width: 400px;
-            height: 100px;
-            margin-left: 15px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            border: none;
-            box-shadow: 0 4px 8px 0 rgba(45, 45, 45, 0.2), 0 6px 20px 0 rgba(49, 49, 49, 0.19);
-        }
-        input.txt{
-            width: 300px;
+        textarea, input.txt, input.date {
+            width: calc(100% - 30px); /* Width will adapt to the container, minus padding/margins */
             height: 30px;
             margin-left: 15px;
             margin-bottom: 10px;
             border-radius: 10px;
             border: none;
-            box-shadow: 0 4px 8px 0 rgba(45, 45, 45, 0.2), 0 6px 20px 0 rgba(49, 49, 49, 0.19);
+            box-shadow: 0 4px 8px rgba(45, 45, 45, 0.2), 0 6px 20px rgba(49, 49, 49, 0.19);
+            padding: 5px;
+            resize: none; /* Prevent textarea from being resized */
         }
-        h3,label{
+        textarea {
+            height: 100px; /* Specific height for textareas */
+        }
+        h3, label {
             margin-left: 15px;
         }
-        h3{
+        h3 {
             color: brown;
         }
-        input.date{
-            width: 300px;
-            height: 30px;
-            margin-left: 15px;
-            margin-bottom: 10px;
-            border-radius: 10px;
+        .cancel, .submit {
+            background-color: #c91a1a;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
             border: none;
-            box-shadow: 0 4px 8px 0 rgba(45, 45, 45, 0.2), 0 6px 20px 0 rgba(49, 49, 49, 0.19);
+            cursor: pointer;
+        }
+        .submit {
+            background-color: #0a6f0c;
+        }
+        .cancel:hover, .submit:hover {
+            background-color: #1a1ac9;
         }
         .cancel {
-            background-color: #c91a1a; 
-            color: white; 
-            padding: 8px;
-            border-radius: 8px;
-            margin-left: 40px;
+            margin-left: 15px;
         }
-
-        .cancel:hover {
-            background-color: #1a1ac9;
+        table {
+            margin-left: 15px;
+            width: calc(100% - 30px); /* Match the input field widths */
         }
-        .submit{
-            background-color: #0a6f0c; 
-            color: white;
-            padding: 8px;
-            border-radius: 8px;
-            margin-left: 40px;
+        table td {
+            padding: 5px;
         }
-        .submit:hover{
-            background-color: #1a1ac9;
+        center {
+            margin-top: 15px;
         }
     </style>
 </head>
-<body style="background-color: rgb(42, 41, 41);">
+<body>
     <div class="container">
-        <center><h1  style="color: rgb(202, 11, 11);">MCA Registration</h1></center>
+        <center><h1 style="color: rgb(202, 11, 11);">MCA Registration</h1></center>
         <a style="text-decoration: none; margin-left: 15px;" href="college.html">Home</a>
         <form action="">
             <h3>Personal Details</h3>
             <input class="txt" type="text" name="" id="" placeholder="Enter your name" autofocus><br>
-            <label>Gender</label><input type="radio" name="gender" value="Male">Male
-                    <input type="radio" name="gender" value="Female">Female
-            <br><input class="date" type="date" name="dob" ><br>
-            <textarea placeholder="Enter your permanent address"></textarea><br><hr>
+            <label>Gender</label>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+            <br>
+            <input class="date" type="date" name="dob"><br>
+            <textarea placeholder="Enter your permanent address"></textarea>
+            <br>
+            <hr>
 
             <h3>Graduation Details</h3>
             <input class="txt" type="text" placeholder="Enter your Degree"><br>
             <input type="text" class="txt" placeholder="Enter University name"><br>
             <input type="number" class="txt" placeholder="Year of Passing"><br>
-            <input type="number" class="txt" placeholder="Percentage"><br><hr>
+            <input type="number" class="txt" placeholder="Percentage"><br>
+            <hr>
 
             <h3>Certificate Upload</h3>
             <table>
-                <tr><td><label>SSLC Certificate</label></td>
-                    <td><input type="file" name="" id=""></td></tr>
-
-                <tr><td><label>Plus 2 Certificate</label></td>
-                    <td><input type="file" name="" id=""></td></tr>
-
-                <tr><td><label>Degree Certificate</label></td>
-                    <td><input type="file" name="" id=""></td></tr>
-            </table><br>
-            <center><button type="submit" class="submit">Submit</button>&nbsp;
-                <button type="reset" class="cancel">Cancel</button>      
+                <tr>
+                    <td><label>SSLC Certificate</label></td>
+                    <td><input type="file" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td><label>Plus 2 Certificate</label></td>
+                    <td><input type="file" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td><label>Degree Certificate</label></td>
+                    <td><input type="file" name="" id=""></td>
+                </tr>
+            </table>
+            <br>
+            <center>
+                <button type="submit" class="submit">Submit</button>
+                <button type="reset" class="cancel">Cancel</button>
             </center>
         </form>
     </div>
