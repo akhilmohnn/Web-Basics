@@ -8,7 +8,7 @@
 </head>
 <body>
   <form id="registrationForm">
-    <h2>Register</h2>
+    <h2>Fill the details</h2>
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
@@ -29,12 +29,15 @@
       <input type="password" id="password" name="password" required>
       <div class="error" id="passwordError"></div>
     </div>
-    <button type="submit">Register</button>
+    <div class="form-group">
+      <button type="submit">Register</button>
+    </div>
   </form>
 
   <script>
     document.getElementById("registrationForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault();
+        //to prevent default submissions
 
       document.getElementById("nameError").textContent = "";
       document.getElementById("emailError").textContent = "";
@@ -42,7 +45,6 @@
       document.getElementById("passwordError").textContent = "";
 
       let isValid = true;
-
       const name = document.getElementById("name").value.trim();
       if (name === "") {
         document.getElementById("nameError").textContent = "Name is required.";
