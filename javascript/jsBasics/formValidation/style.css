@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Form Styles */
+  form {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 350px;
+  }
+  
+  form h2 {
+    text-align: center;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: center; /* Center-align all form elements */
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 80%; /* Align input boxes centrally with fixed width */
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border: 1px solid #ffffff;
+  }
+  
+  /* Error Message */
+  .form-group .error {
+    color: #ff4d4d;
+    font-size: 0.9em;
+  }
+  
+  /* Button Styles */
+  button {
+    width: 80%;
+    padding: 10px;
+    background-color: #3b3b3b;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
