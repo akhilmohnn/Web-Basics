@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Basic form valiation</title>
+</head>
+
+<body>
+<center>
+
+<h2>JavaScript Validation</h2>
+<br>
+
+<form name="myform" action="" onsubmit="return validateForm()" method="post">
+
+Name <input type="text" name="StudName"><br>
+Password<input type="password" name="password" placeholder="use special characters also"><br>
+<input type="submit" value="submit">
+
+
+</form>
+
+<script>
+
+function validateForm(){
+
+let x=document.forms["myform"]["StudName"].value;
+
+if(x==""){
+
+alert("Name must be filled out!");
+return False;
+}
+
+}
+
+</script>
+
+
+</body>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Event Handling</title>
+
+</head>
+
+<body>
+<center>
+<br><br><br><br><br><br><br><br><br><br><br><br> 
+<button id="btn">Click the button</button>
+
+<p id="demo"></p>
+
+<style>
+
+button{
+background-color: #79ddd1;
+border-radius:25px;
+
+}
+</style>
+
+<script>
+
+var x= document.getElementById("btn");
+
+function mouseOverFunction(){
+
+document.getElementById("demo").innerHTML="Mouse hovered button!🕺<br>";
+
+}
+
+function mouseOutFunction(){
+
+document.getElementById("demo").innerHTML="Mouse hovered out😶!!!";
+}
+
+function mouseClickFunction() {
+
+document.getElementById("demo").innerHTML += "Clicked💪<br>";
+
+}
+
+x.addEventListener("mouseover",mouseOverFunction);
+x.addEventListener("click",mouseClickFunction);
+x.addEventListener("mouseout",mouseOutFunction);
+
+
+
+</script>
+
+</center>
+</body>
+</html>
