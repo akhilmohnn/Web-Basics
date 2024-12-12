@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Method</title>
+</head>
+<body>
+
+<center>
+
+
+	<h4>Search student data</h4>
+    <form name=searchForm method="post" action="search.php">
+
+	Roll no<input type="text" name="rollno">
+	<input type="submit" name="search" value="search">
+
+	</form>
+</center>
+
 <?php
 
 $servername = "localhost";
@@ -14,29 +35,6 @@ if (!$con) {
 }
 
 echo "Connected successfully<br>";
-
-if (isset($_POST['submit'])) {
-    $name = $_POST['fname'];
-    $rollno = $_POST['rollno'];
-    $markDS = $_POST['markDS'];
-    $markASE = $_POST['markASE'];
-    $markTot = $_POST['markTot'];
-
-    echo "Name: " . $name;
-    echo "<br>Roll no: " . $rollno;
-    echo "<br>DS Mark: " . $markDS;
-    echo "<br>ASE Mark: " . $markASE;
-    echo "<br>Total mark: " . $markTot;
-
-    $sql = "INSERT INTO studentMark (name, rollno, markDS, markASE, markTot) 
-			VALUES ('$name', '$rollno', '$markDS', '$markASE', '$markTot')";
-
-    if (mysqli_query($con, $sql)) {
-        echo "<br>New record added successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($con);
-    }
-}
 
 if(isset($_POST["search"]))
 {
@@ -64,7 +62,7 @@ $result=mysqli_query($con,$sql);
 
 		}
 }
-
-
-mysqli_close($con);
 ?>
+
+</body>
+</html>
