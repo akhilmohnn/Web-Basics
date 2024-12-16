@@ -37,8 +37,15 @@
 	<h4>Search student data</h4>
     <form name=searchForm method="post" action="studentInput.php">
 
-	Roll no<input type="text" name="roll">
+	Roll no<input type="text" name="rollno">
 	<input type="submit" name="search" value="search">
+
+	</form>
+
+	<h4>View All data</h4>
+    <form name=searchForm method="post" action="studentInput.php">
+
+	<input type="submit" name="searchall" value="Display all">
 
 	</form>
 </center>

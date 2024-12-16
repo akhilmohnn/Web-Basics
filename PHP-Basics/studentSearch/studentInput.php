@@ -65,6 +65,40 @@ $result=mysqli_query($con,$sql);
 		}
 }
 
+if(isset($_POST["searchall"]))
+{
+$sql="SELECT *FROM studentmark";
+$result=mysqli_query($con,$sql);
+
+
+	if(mysqli_num_rows($result)>0){
+	echo "<table border='1'>
+	<tr>
+		<th>Roll no</th>
+		<th>Student name</th>
+		<th>DS Mark</th>
+		<th>ASE Mark</th>
+		<th>Total mark</th>
+	</tr>";
+		while($row=mysqli_fetch_assoc($result)){
+		echo "<tr>
+
+		<td> ".$row['rollno']."</td>
+		<td>".$row['name']."</td>
+		<td>".$row['markDS']."</td>
+		<td>".$row['markASE']."</td>
+		<td>".$row['markTot']."</td>
+		
+		</tr>";
+
+
+			}}
+	else{
+		
+		echo "No student found with rollno: $rollno";
+		
+		}
+}
 
 mysqli_close($con);
 ?>
