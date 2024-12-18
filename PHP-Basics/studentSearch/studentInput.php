@@ -65,40 +65,34 @@ $result=mysqli_query($con,$sql);
 		}
 }
 
-if(isset($_POST["searchall"]))
-{
-$sql="SELECT *FROM studentmark";
-$result=mysqli_query($con,$sql);
+if (isset($_POST["searchall"])) {
+    $sql = "SELECT * FROM studentmark";
+    $result = mysqli_query($con, $sql);
 
-
-	if(mysqli_num_rows($result)>0){
-	echo "<table border='1'>
-	<tr>
-		<th>Roll no</th>
-		<th>Student name</th>
-		<th>DS Mark</th>
-		<th>ASE Mark</th>
-		<th>Total mark</th>
-	</tr>";
-		while($row=mysqli_fetch_assoc($result)){
-		echo "<tr>
-
-		<td> ".$row['rollno']."</td>
-		<td>".$row['name']."</td>
-		<td>".$row['markDS']."</td>
-		<td>".$row['markASE']."</td>
-		<td>".$row['markTot']."</td>
-		
-		</tr>";
-
-
-			}}
-	else{
-		
-		echo "No student found with rollno: $rollno";
-		
-		}
+    if (mysqli_num_rows($result) > 0) {
+        echo "<table border='1' style='border-collapse: collapse; width: 80%; margin-left:60px; text-align: center; font-family: Arial, sans-serif;'>";
+        echo "<tr style='background-color:rgb(231, 188, 102);'>";
+        echo "<th style='padding: 8px; border: 1px solid #ddd;'>Roll no</th>";
+        echo "<th style='padding: 8px; border: 1px solid #ddd;'>Student name</th>";
+        echo "<th style='padding: 8px; border: 1px solid #ddd;'>DS Mark</th>";
+        echo "<th style='padding: 8px; border: 1px solid #ddd;'>ASE Mark</th>";
+        echo "<th style='padding: 8px; border: 1px solid #ddd;'>Total mark</th>";
+        echo "</tr>";
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr style='background-color:rgb(237, 220, 186);'>";
+            echo "<td style='padding: 8px; border: 1px solid #ddd;'>" . $row['rollno'] . "</td>";
+            echo "<td style='padding: 8px; border: 1px solid #ddd;'>" . $row['name'] . "</td>";
+            echo "<td style='padding: 8px; border: 1px solid #ddd;'>" . $row['markDS'] . "</td>";
+            echo "<td style='padding: 8px; border: 1px solid #ddd;'>" . $row['markASE'] . "</td>";
+            echo "<td style='padding: 8px; border: 1px solid #ddd;'>" . $row['markTot'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "No records found.";
+    }
 }
+
 
 mysqli_close($con);
 ?>
