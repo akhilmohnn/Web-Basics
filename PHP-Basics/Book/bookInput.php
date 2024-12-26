@@ -5,7 +5,6 @@
 
 <body>
 
-</body>
 <center>
 <h4>Book Details</h4>
 <form name="booksForm" method="POST" action="bookDisplay.php">
@@ -41,4 +40,5 @@ Author name:<input type="text" name="book_author" id="book_author">
 
 </form>
 
+</body>
 </html>
