@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiple Events on Button</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 50px;
+background-color: black;
+}
+button {
+padding: 10px 20px;
+font-size: 16px;
+background-color: rgba(76, 132, 168, 0.776);
+width: 300px;
+height: 100px;
+border: none;
+
+border-radius: 10px;
+color: white;
+margin-top: 200px;
+cursor: pointer;
+transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.hovered {
+background-color: #ff6347;
+color: white;
+}
+p {
+font-size: 18px;
+margin-top: 20px;
+color: white;
+}
+</style>
+</head>
+<body>
+<button id="myButton">Click Here</button>
+<p id="output"></p>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+const button = document.getElementById('myButton');
+const output = document.getElementById('output');
+
+button.addEventListener('click', () => {
+alert('Button clicked!');
+});
+
+button.addEventListener('click', () => {
+output.textContent = 'You clicked the button!';
+});
+button.addEventListener('mouseover', () => {
+button.classList.add('hovered');
+output.textContent = 'You are hovering over the button!';
+});
+button.addEventListener('mouseout', () => {
+button.classList.remove('hovered');
+output.textContent = '';
+});
+});
+</script>
+</body>
+</html>
