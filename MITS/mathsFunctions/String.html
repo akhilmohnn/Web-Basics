@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>String Operations</title>
+<style>
+body {
+background-color: black;
+color: white;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+input[type="text"] {
+padding: 10px;
+border: 1px solid white;
+border-radius: 5px;
+background-color: black;
+color: white;
+}
+
+input[type="submit"] {
+padding: 10px 20px;
+border: none;
+background-color: white;
+color: black;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+input[type="submit"]:hover {
+background-color: gray;
+}
+h3 {
+margin: 10px 0;
+}
+</style>
+</head>
+<body>
+<h3>
+<form onsubmit="strfunction(event)">
+<label for="stringval">Enter String:</label>
+<input type="text" id="stringval" name="stringval"><br><br>
+<input type="submit" name="submit" value="Submit">
+</form>
+</h3>
+<h3 id="strdemo1"></h3>
+<h3 id="strdemo2"></h3>
+<h3 id="strdemo3"></h3>
+<h3 id="strdemo4"></h3>
+<h3 id="strdemo5"></h3>
+<h3 id="strdemo6"></h3>
+
+<h3 id="strdemo7"></h3>
+<script>
+function strfunction(event) {
+event.preventDefault();
+let val = document.getElementById("stringval").value;
+document.getElementById("strdemo1").innerHTML = "length: " + val.length;
+document.getElementById("strdemo2").innerHTML = "slice(4,8): " + val.slice(4, 8);
+document.getElementById("strdemo3").innerHTML = "substring(0,6): " + val.substring(0, 6);
+document.getElementById("strdemo4").innerHTML = "substr(2,5): " + val.substr(2, 5);
+document.getElementById("strdemo5").innerHTML = "upper case: " + val.toUpperCase();
+document.getElementById("strdemo6").innerHTML = "lower case: " + val.toLowerCase();
+document.getElementById("strdemo7").innerHTML= "concat hello: " + val.concat(" ", "hello");
+}
+</script>
+</body>
+</html>
