@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Stitching unit</title>
+</head>
+
+<body>
+    <center>
+<form name="inputForm" method="post" onsubmit="return validation()" action="stitchData.php">
+    CustomerID<input type="text" name="customer_id" id="customer_id">
+    <br><br>
+    Item<input type="text" name="items" id="items">
+    <br><br>
+    DateofArrival:<input type="date" name="dateofarrival" id="dateofarrival">
+    <br><br>
+    Deliverydate:<input type="date" name="dateofdelivery" id="dateofdelivery">
+    <br><br>
+    TailorINcharges:<input type="text" name="tailorcharges" id="tailorcharges">
+    <br><br>
+    Stitchcharges:<input type="text" name="stitchcharges" id="stitchcharges">
+    <br><br>
+    <input type="submit" name="submit" value="save">
+    <div id="error-message" class="error-message"></div>
+</form>
+    <br><br>
+    <form name="searchForm" method="post" action="stitchData.php">
+        <input type="submit" name="searchAll" value="search">
+    </form>
+    
+    <style>
+        .error-message{
+            color: red;
+        }
+    </style>
+
+    <script src="validation.js"></script>
+
+
+</center>
+</body>
+
+</html>
