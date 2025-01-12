@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    .error-message {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<script>
+function validation() {
+  var password = document.getElementById("password").value.trim();
+  var cpassword = document.getElementById("cpassword").value.trim();
+  var email = document.getElementById("useremail").value.trim();
+  var phone = document.getElementById("phone").value.trim();
+  var errorDiv = document.getElementById("error-message");
+
+  // Clear previous error messages
+  errorDiv.textContent = "";
+
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  if (!emailPattern.test(email)) {
+    errorDiv.textContent = "Invalid email format.";
+    return false;
+  }
+
+  var phonePattern = /^\d{10}$/;
+  if (!phonePattern.test(phone)) {
+    errorDiv.textContent = "Phone number must be exactly 10 digits.";
+    return false;
+  }
+
+  var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+  if (!passwordPattern.test(password)) {
+    errorDiv.textContent = "Password must be at least 6 characters long, and include an uppercase letter, a lowercase letter, a number, and a special character.";
+    return false;
+  }
+
+  if (password !== cpassword) {
+    errorDiv.textContent = "Passwords do not match.";
+    return false;
+  }
+
+  return true;  // Allow form submission if all checks pass
+}
+</script>
+
+<center>
+  <form name="inputForm" method="post" onsubmit="return validation()" action="confirm.html">
+    Name: <input type="text" name="username" id="username" required>
+    <br><br>
+    
+    Email: <input type="text" name="useremail" id="useremail" required>
+    <br><br>
+  
+    Phone Number: <input type="text" name="phone" id="phone" required>
+    <br><br>
+  
+    Password: <input type="password" name="password" id="password" required>
+    <br><br>
+  
+    Confirm Password: <input type="password" name="cpassword" id="cpassword" required>
+    <br><br>
+  
+    <div id="error-message" class="error-message"></div>
+  
+    <input type="submit" name="submit" value="Submit">
+  </form>
+</center>
+
+</body>
+</html>
